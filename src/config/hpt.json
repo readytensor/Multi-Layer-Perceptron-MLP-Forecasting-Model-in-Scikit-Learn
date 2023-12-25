@@ -1,0 +1,45 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "encode_to_decode_ratio",
+      "short_desc": "Ratio of history window (encoding) length to prediction window (decoding) length.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 3,
+      "range_high": 6
+    },
+    {
+      "name": "hidden_layer_size",
+      "short_desc": "Number of neurons in the single hidden layer.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 5,
+      "range_high": 150
+    },
+    {
+      "name": "activation",
+      "short_desc": "Activation function for the hidden layer.",
+      "type": "categorical",
+      "categories": ["relu", "tanh", "logistic", "identity"]
+    },
+    {
+      "name": "solver",
+      "short_desc": "The solver for weight optimization.",
+      "type": "categorical",
+      "categories": ["adam", "sgd", "lbfgs"]
+    },
+    {
+      "name": "learning_rate",
+      "short_desc": "Learning rate schedule for weight updates.",
+      "type": "categorical",
+      "categories": ["constant", "invscaling", "adaptive"]
+    },
+    {
+      "name": "use_exogenous",
+      "short_desc": "Whether or not to use exogenous features.",
+      "type": "categorical",
+      "categorical_vals": ["True", "False"]
+    }
+  ]
+}
