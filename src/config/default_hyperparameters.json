@@ -1,7 +1,7 @@
 {
   "encode_to_decode_ratio": 4.0,
   "hidden_layer_size": 100,
-  "activation": "relu",
+  "activation": "tanh",
   "solver": "adam",
   "learning_rate": "adaptive",
   "use_exogenous": true
