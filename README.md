@@ -21,6 +21,16 @@ The following are the requirements for using your data with this model:
 
 ---
 
+### Covariates Support:
+
+- Past ✅
+- Future ❌
+- Static ✅
+
+> > This implementation treats static covariates as past covariates.
+
+---
+
 Here are the highlights of this implementation: <br/>
 
 - **Hyperparameter Tuning**: HPT is implemented using **scikit-optimize** library. To perform hyperparameter-tuning, run the training script (`src/train.py`) with the `--tune` or `-t` flag. This will identify the best hyperparameters using Bayesian Optimization and use those to train the model.
